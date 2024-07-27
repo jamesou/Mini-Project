@@ -30,10 +30,10 @@ def csv_to_mssql(csv_file,sql_table):
     
 def extract_transform():
     #I will set these constants as configured parameters in real project instead of hard code
-    # parquet_to_mssql("fhv_tripdata_2023-01.parquet","fhv")
-    # parquet_to_mssql("fhvhv_tripdata_2023-01.parquet","fhvhv")
-    # parquet_to_mssql("green_tripdata_2023-01.parquet","green")
-    # parquet_to_mssql("yellow_tripdata_2023-01.parquet","yellow")
+    parquet_to_mssql("fhv_tripdata_2023-01.parquet","fhv")
+    parquet_to_mssql("fhvhv_tripdata_2023-01.parquet","fhvhv")
+    parquet_to_mssql("green_tripdata_2023-01.parquet","green")
+    parquet_to_mssql("yellow_tripdata_2023-01.parquet","yellow")
     csv_to_mssql("taxi_zone_lookup.csv",'taxi_zone')
 
 if __name__ == "__main__":

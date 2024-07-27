@@ -9,6 +9,7 @@ Run the following code in sequence
 - extract_transform.py: this file is to extract data from file and transform to ODS layer
 - load.py: using this file for loading data from ODS to DWD based on the mapping.xlsx and design document
 - analysis.py: run this script to produce the data insight to DWS layer for providing data to BI tool. Such as lookerstudio
+- DDL.sql
 ## Architecture
 <div align="center">
     <img src="./source/architecture.jpg">
