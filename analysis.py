@@ -53,7 +53,7 @@ def avg_trip_dist(cursor):
     SELECT ld.borough, AVG(tf.trip_distance) AS average_trip_distance
     FROM trips_fact tf
     LEFT JOIN location_dim ld ON  tf.pickup_location_id  = ld.location_id
-    where trip_distance is not NULL  
+    where trip_distance  is not NULL and tf.pickup_location_id not in (264,265)
     GROUP BY 
         ld.borough
     ORDER BY 
@@ -72,7 +72,7 @@ def common_locations(cursor):
     sql=f"""
     INSERT INTO common_locations (location_type, zone, trip_count)
     select * from (
-        SELECT top 8 
+        SELECT top 10 
             'pickup' AS location_type,
             ld.zone AS zone,
             COUNT(tf.trip_id) AS trip_count
@@ -86,7 +86,7 @@ def common_locations(cursor):
     ) x
 	UNION ALL 
     select * from (	
-        SELECT top 8  
+        SELECT top 10  
             'dropoff' AS location_type,
             ld.zone AS zone,
             COUNT(tf.trip_id) AS trip_count
