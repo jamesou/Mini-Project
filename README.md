@@ -10,10 +10,6 @@ Run the following code in sequence
 - load.py: using this file for loading data from ODS to DWD based on the mapping.xlsx and design document
 - analysis.py: run this script to produce the data insight to DWS layer for providing data to BI tool. Such as lookerstudio
 - DDL.sql: creating table scripts
-## Architecture
-<div align="center">
-    <img src="./source/architecture.jpg">
-</div>
 ## Screenshot
 <div align="center">
     <img src="./source/screenshot.jpg">
