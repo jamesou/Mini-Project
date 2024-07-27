@@ -177,8 +177,8 @@ def load_trips_fact():
 
 def load():
     # load_date_dim()
-    load_location_dim()
-    # load_trips_fact()
+    # load_location_dim()
+    load_trips_fact()
   
 
 if __name__ == "__main__":
