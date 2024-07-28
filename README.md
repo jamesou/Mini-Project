@@ -10,6 +10,7 @@ Run the following code in sequence
 - load.py: using this file for loading data from ODS to DWD based on the mapping.xlsx and design document
 - analysis.py: run this script to produce the data insight to DWS layer for providing data to BI tool. Such as lookerstudio
 - DDL.sql: creating table scripts
+- mapping.xlsx: detailly explain the mapping rules between the source and target tables
 ## Screenshot
 <div align="center">
     <img src="./source/screenshot.jpg">
